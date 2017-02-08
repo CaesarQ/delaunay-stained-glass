@@ -292,7 +292,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate a stained glass transform of an image")
     parser.add_argument('--art', dest='art', type=str, help='Input image to transform')
     parser.add_argument('--output', dest='output', type=str, help='Path to save file')
-    parser.add_argument('--min_dist', dest='min_dist', type=int, help='Min distance for non maximal suppression')
+    parser.add_argument('--min_dist', dest='min_dist', type=int, help='Min distance for non maximal suppression. Higher values mean higher crystallinity of the transform.')
     parser.set_defaults(min_dist=35, output='stained_glass_transform.png')
 
     args = parser.parse_args()
